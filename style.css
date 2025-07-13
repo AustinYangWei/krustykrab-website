@@ -1,0 +1,171 @@
+/* 解決 sticky header 遮住區塊標題 */
+html {
+    scroll-padding-top: 140px;
+}
+
+/* 全站基本樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fef9e7;
+    color: #333;
+}
+
+header {
+    background-color: rgba(255, 183, 77, 0.8); /* 橘黃色 + 透明度 0.8 */
+    padding: 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* 適度陰影 */
+}
+
+header h1 {
+    margin: 0.5rem 0;
+    text-shadow: 1px 1px 4px #000; /* 加強可讀性 */
+}
+
+.logo {
+    width: 100px;
+}
+
+/* 導覽按鈕樣式與動畫 */
+nav button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #f57c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: #e65100;
+    transform: scale(1.1);
+}
+
+nav button:active {
+    transform: scale(0.95);
+}
+
+/* 各區塊設定 */
+section {
+    padding: 2rem;
+    border-bottom: 1px solid #ccc;
+    min-height: 300px;
+}
+
+/* 首頁背景圖樣式 */
+#home {
+    background-image: url('bikini-bottom.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* 區塊標題顏色 */
+section h2 {
+    color: #d84315;
+}
+
+/* 頁尾 */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #ffb74d;
+}
+
+/* 菜單卡片區 */
+.menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.menu-item {
+    text-align: center;
+    width: 200px;
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.menu-item img:hover {
+    transform: scale(1.05);
+}
+
+/* 區塊淡入動畫 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 列表樣式 */
+section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* 社群連結按鈕 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    background-color: #f57c00;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.social-links a:hover {
+    background-color: #e65100;
+    transform: scale(1.1);
+}
+
+/* 回頂部按鈕 */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 0.8rem 1rem;
+    background-color: #f57c00;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background-color: #e65100;
+    transform: scale(1.1);
+}
